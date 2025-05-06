@@ -2,8 +2,7 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,7 @@ html, body, #root {
   width: 100%;
   font-family: 'Helvetica Neue', sans-serif;
 }
->>>>>>> 79143eb (check)
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -51,8 +50,7 @@ html, body, #root {
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
-=======
+
 h1.absolute.top-1\/2.left-1\/2.transform.-translate-x-1\/2.-translate-y-1\/2.z-10.text-4xl.md\:text-6xl.font-bold.text-red.mb-4{
   margin-top: -400px;
   color: red;
@@ -244,4 +242,55 @@ section.py-12.px-6.text-center{
 section.wedding-slider.px-4.py-8.bg-white {
   padding: 10px 0;
 }
->>>>>>> 79143eb (check)
+
+/* Gallery.css */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-item.big {
+  grid-column: span 2;
+  /* height: 300px; */
+}
+
+.gallery-item.small {
+  height: auto;
+}
+
+
+.map-section {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 900px;
+  text-align: center;
+  background-color: #fff8f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #c04c4c;
+  font-family: 'Georgia', serif;
+}
+
+.map-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

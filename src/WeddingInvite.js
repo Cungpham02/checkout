@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Player } from '@lottiefiles/react-lottie-player';
-import Book from "./Book";
+import React from "react";
+import LazyLoad from "react-lazyload";
 
+const images = [
+  "/images/32.jpg",
+  "/images/32.jpg",
+  "/images/32.jpg",
+  // thêm ảnh của bạn ở đây
+];
 export default function WeddingInvite() {
   useEffect(() => {
     const audio = new Audio("/wedding-music.mp3");
@@ -164,9 +170,32 @@ export default function WeddingInvite() {
           (Tức Ngày 16 Tháng 10 Năm Giáp Thìn)
         </p>
       </motion.div>
+      <div className="gallery-container">
+      {images.map((src, index) => (
+        <div
+          key={index}
+          className={`gallery-item ${index % 5 === 0 ? "big" : "small"}`}
+        >
+          <img src={src} alt={`Wedding ${index + 1}`} />
+        </div>
+      ))}
+    </div>
 
-
-
+    <div className="map-section">
+      <h2 className="map-title">📍 Địa điểm tổ chức lễ cưới</h2>
+      <div className="map-container">
+        <iframe
+          title="Wedding Location"
+           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8262.374343123676!2d106.26858754690466!3d20.310802493840296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136097df72687df%3A0x3ac1cb4fd78d6f64!2zU8OibiBiw7NuZyDEkcOhIG1pbmkgVMOibiBCw6xuaA!5e1!3m2!1svi!2sus!4v1746501977467!5m2!1svi!2sus" 
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
 
 
       {/* <footer className="text-center py-6 text-sm text-gray-500">
